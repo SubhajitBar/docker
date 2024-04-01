@@ -1,0 +1,21 @@
+create new cont.:
+	docker run -it <image-name> (-it stands for interactive TTY)
+
+Execute commands in a running container:
+	docker exec <container-name>/<container-id> <command> (after exectuing the command terminal will return back to system default)
+
+	docker exec -it <container-name>/<container-id> bash (terminal will stick to that cont.) 
+
+Find Containers & Images:
+	docker container ls (only show runnning cont.)
+	docker container ls -a(all including stopped)
+	docker images / image -ls
+	
+
+start & stop:
+	docker start <container-name>/<container-id>
+	docker stop <container-name>/<container-id>
+
+Port mapping(-p):
+	docker run -it -p 5000:8000 <image_name> (5000: myPort, 8000: cont.Port )
+
