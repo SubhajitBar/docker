@@ -26,3 +26,13 @@ Port mapping(-p):
 
 Env(-e):
 	docker run -it -p 5000:8000 -e key=value -e key=value <image_name>
+
+
+## Run using Docker Compose
+
+Build image:
+  docker build -t <image-name> .
+
+Spin up container
+  docker run -d -p 3000:80 reactContainer .
+  docker-compose up -d
